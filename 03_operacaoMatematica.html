@@ -7,7 +7,44 @@
     */
 
     //ENTRADA
+    const numero1 = Number(prompt("informe o numero 1"));
+  const numero2 = Number(prompt("informe o numero 2"));
+  const operacao = prompt("informe a operacao +(A) *(V) /(D) -(S)")?.toUpperCase() ;
+  
+  let ParImpar;
+  let conceito;
+  let positivoNegativo;
+  //PROCESSAMENTO
+  switch (operacao) {
+    case "A":
+      conceito = numero1 + numero2;
+      break;
+    case "V":
+      conceito = numero1 * numero2;
+      break;
+    case "D":
+      conceito = numero1 / numero2;
+      break;
+    case "S":
+      conceito = numero1 - numero2;
+  }
 
+  switch (conceito % 2) {
+    case 0 :
+         ParImpar = "par"
+        break;
+  
+    default: ParImpar = "impar" 
+       break
+  }
+  switch (conceito) {
+    case 1:
+        positivoNegativo
+        break;
+  
+    default:
+        break;
+  }
 
     //PROCESSAMENTO
 

@@ -10,21 +10,40 @@
     */
 
     //ENTRADA
-    const pergunta1 = prompt("Telefonou para a vítima?")
-    const pergunta2 = prompt("Esteve no local do crime?")
-    const pergunta3 = prompt("Mora perto da vítima?")
-    const pergunta4 = prompt("Devia para a vítima?")
-    const pergunta5 = prompt("Já trabalhou com a vítima?")
+    
+const telefonou = parseInt(prompt(`Telefonou para a vítima?(0-não| 1-sim`));
+  const local = parseInt(prompt(`Esteve no local do crime(0-não| 1-sim`));
+  const moraPerto = parseInt(prompt(`Esteve no local do crime?(0-não| 1-sim`));
+  const devia = parseInt(prompt(`Devia para a vitima? (0-não| 1-sim`));
+  const trabalhou = parseInt(prompt(`Já trabalhou para a vitima? (0-não| 1-sim`));
+
+  let resultadoNaTela;
+  const pontos = telefonou + local + moraPerto + devia + trabalhou;
+
+  switch (pontos) {
+    case 1:
+      resultadoNaTela = `inocente`;
+      break;
+    case 2:
+      resultadoNaTela = `suspeito`;
+    default:
+      break;
+    case 3:
+    case 4:
+      resultadoNaTela = `cúmplice`;
+
+      break;
+    case 5:
+      resultadoNaTela = `assassino`;
+      break;
+  }
+
+  alert(`${resultadoNaTela}`) ;
 
     //PROCESSAMENTO
-let grauParticipaçao = 0
-    if(pergunta1 === `sim`) grauParticipaçao = grauParticipaçao + 1
-if (pergunta2 === `sim`) grauParticipaçao++
-if (pergunta3 === `sim`)grauParticipaçao++
-if (pergunta4 === `sim`)grauParticipaçao++
-if (pergunta5 === `sim`)grauParticipaçao++
+
     //SAÍDA
-swicth()
+
     //PROCESSAMENTO
 
     
