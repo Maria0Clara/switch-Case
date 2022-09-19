@@ -1,0 +1,33 @@
+<script>
+    /*
+    //PROBLEMA: Faça um script que pergunte em que turno você estuda.
+    Peça para digitar M-matutino ou V-Vespertino ou N- Noturno.
+    Imprima a mensagem
+    - "Bom Dia!"
+    - "Boa Tarde!" ou
+    - "Boa Noite!" ou
+    - "Valor Inválido!"
+    conforme o caso.
+    */
+
+    //ENTRADA
+const turno = prompt("Que turno você estuda? m (matutino), v (vespertino) ou n (noturno)")
+    let respostaNaTela
+    //PROCESSAMENTO
+switch(turno){
+case `m`:
+   respostaNaTela = `Bom Dia!` ;
+break;
+case `v`:
+    respostaNaTela = `Boa Tarde!`
+break;
+case `n`:
+    respostaNaTela = `Boa Noite!`
+    break;
+    default:respostaNaTela = `Valor Inválido!`
+    break;
+}
+    
+    //SAÍDA
+document.write(`${respostaNaTela}`)
+</script>
